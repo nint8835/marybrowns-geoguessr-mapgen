@@ -1,3 +1,4 @@
+import csv
 import json
 
 from selenium import webdriver
@@ -9,5 +10,8 @@ driver.get("https://marybrowns.com/locations/")
 
 locations = driver.execute_script("return _locations")
 
-with open("locations.json", "w") as f:
-    json.dump(locations, f, indent=4, sort_keys=True)
+with open("locations.csv", "w") as f:
+    writer = csv.writer(f)
+
+    for location in locations:
+        writer.writerow([location["lat"], location["lng"]])
