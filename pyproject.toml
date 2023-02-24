@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "marybrowns-geoguessr-mapgen"
+version = "0.1.0"
+description = ""
+authors = ["Riley Flynn <riley@rileyflynn.me>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "marybrowns_geoguessr_mapgen"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+selenium = "^4.8.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
